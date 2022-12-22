@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# For now loop will install the composer dependencies,
+# berth script will eventually be a home to proxy most 
+# commands a user will need to interact with the containers 
+# and app.
+
+# 1. Sets the user id so docker does not run as root 
+# 2. Runs docker-compose using the specified config file
+# 3. runs the composer container with the install comand
+
+CURRENT_UID=$(id -u):$(id -g) docker-compose -f composer.docker.yml run composer install

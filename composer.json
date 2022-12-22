@@ -1,0 +1,38 @@
+{
+    "name": "integrity/loop",
+    "description": "PHP Development Boilerplate",
+    "type": "library",
+    "require": {
+    },
+    "require-dev": {
+        "integrity/tivoli": "dev-main"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-4": {
+            "Your\\App\\": "src/",
+            "You\\App\\Tests\\": "tests/unit"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/*"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/integritystl/php-trolley.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/integritystl/php-tivoli.git"
+        }
+    ],
+    "scripts": {
+        "post-autoload-dump" : [
+            "bin/tivoli install"
+        ]
+    }
+}

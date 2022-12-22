@@ -1,0 +1,7 @@
+services:
+  composer:
+    user: ${CURRENT_UID}
+    container_name: composer
+    image: composer   
+    volumes:
+      - ./:/app 

@@ -1,0 +1,11 @@
+vendor
+bin/*
+!bin/loop
+reports
+.phpdoc
+build/docs/*
+!/build/docs/index.php
+.DS_Store
+./docker-compose.yml
+packages/*
+!packages/.gitkeep
